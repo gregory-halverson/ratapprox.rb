@@ -1,6 +1,12 @@
+# Gregory H. Halverson
+# 6 March 2015
+
 module Math
   DEFAULT_MAXDEN = 1000000
 
+  # takes floating point value and maximum denominator
+  # returns rational approximation as integer numerator and limited denominator and difference with input value
+  # ported from David Eppstein's algorithm
   def self.approx(val, maxden=DEFAULT_MAXDEN)
     sign = 1
     m11 = 1
